@@ -32,18 +32,18 @@ export function Header() {
                     <Link href="/" className="flex items-center gap-4">
                         <div className="relative w-12 h-12 lg:w-14 lg:h-14">
                             <img
-                                src="/assets/logo-naudy.webp"
+                                src="/assets/logo-gold.png"
                                 alt="Naudy López Logo"
-                                className="w-full h-full object-contain"
+                                className="w-full h-full object-contain rounded-lg"
                             />
                         </div>
                         <div className="flex flex-col border-l border-white/20 pl-4">
-                            <span className="text-white font-bold text-base lg:text-lg leading-tight tracking-tight" style={{ fontFamily: "var(--font-heading)" }}>
+                            <p className="text-white font-black text-sm lg:text-base leading-tight tracking-tight uppercase" style={{ fontFamily: "var(--font-heading)" }}>
                                 NAUDY LÓPEZ
-                            </span>
-                            <span className="text-[#D4AF37] text-[10px] lg:text-xs font-bold tracking-[0.2em] uppercase">
+                            </p>
+                            <p className="text-[#D4AF37] text-[10px] lg:text-xs font-black tracking-[0.3em] uppercase">
                                 BROKER 360°
-                            </span>
+                            </p>
                         </div>
                     </Link>
 

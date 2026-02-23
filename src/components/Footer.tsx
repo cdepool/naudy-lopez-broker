@@ -13,9 +13,9 @@ export function Footer() {
                         <div className="flex items-center gap-4 mb-8">
                             <div className="relative w-12 h-12">
                                 <img
-                                    src="/assets/logo-naudy.webp"
+                                    src="/assets/logo-gold.png"
                                     alt="Naudy López Logo"
-                                    className="w-full h-full object-contain"
+                                    className="w-full h-full object-contain rounded-lg"
                                 />
                             </div>
                             <div className="border-l border-white/10 pl-4 py-1">
