@@ -42,18 +42,19 @@ export function FAQ() {
     const [open, setOpen] = useState<number | null>(null);
 
     return (
-        <section id="faq" className="py-20 lg:py-28 bg-[#F8FAFC]">
+        <section id="faq" className="py-24 lg:py-32 bg-black relative">
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-[#D4AF37]/5 blur-[120px] rounded-full pointer-events-none" />
             <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Header */}
-                <div className="text-center mb-14">
-                    <span className="inline-block bg-[#003366]/10 text-[#003366] text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-4">
+                <div className="text-center mb-16 relative z-10">
+                    <span className="inline-block bg-[#D4AF37]/10 text-[#D4AF37] text-[10px] font-bold uppercase tracking-[0.3em] px-5 py-2 rounded-full mb-6 border border-[#D4AF37]/20">
                         Preguntas frecuentes
                     </span>
                     <h2
-                        className="text-3xl sm:text-4xl font-bold text-[#003366]"
+                        className="text-4xl sm:text-5xl font-black text-white uppercase tracking-tight"
                         style={{ fontFamily: "var(--font-heading)" }}
                     >
-                        Resolvemos tus dudas
+                        RESOLVEMOS <span className="text-[#D4AF37]">TUS DUDAS</span>
                     </h2>
                 </div>
 
@@ -62,24 +63,24 @@ export function FAQ() {
                     {faqs.map((faq, index) => (
                         <div
                             key={index}
-                            className="bg-white rounded-2xl border border-gray-100 overflow-hidden hover:border-[#003366]/20 transition-colors duration-200"
+                            className="bg-white/[0.03] rounded-2xl border border-white/5 overflow-hidden hover:border-[#D4AF37]/30 transition-all duration-300 group"
                         >
                             <button
                                 onClick={() => setOpen(open === index ? null : index)}
                                 className="w-full text-left flex items-center justify-between px-6 py-5 gap-4"
                                 aria-expanded={open === index}
                             >
-                                <span className="font-semibold text-[#003366] text-base leading-snug">
+                                <span className="font-bold text-white text-base leading-snug group-hover:text-[#D4AF37] transition-colors">
                                     {faq.q}
                                 </span>
                                 <ChevronDown
                                     size={20}
-                                    className={`shrink-0 text-[#FFD700] transition-transform duration-300 ${open === index ? "rotate-180" : ""}`}
+                                    className={`shrink-0 text-[#D4AF37] transition-transform duration-300 ${open === index ? "rotate-180" : ""}`}
                                 />
                             </button>
                             {open === index && (
-                                <div className="px-6 pb-5">
-                                    <p className="text-gray-600 text-sm leading-relaxed border-t border-gray-100 pt-4">
+                                <div className="px-6 pb-6">
+                                    <p className="text-white/50 text-sm leading-relaxed border-t border-white/5 pt-5 font-medium">
                                         {faq.a}
                                     </p>
                                 </div>

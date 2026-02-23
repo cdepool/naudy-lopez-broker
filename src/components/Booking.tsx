@@ -10,37 +10,37 @@ export function Booking() {
     const hasBookingUrl = BOOKING_URL !== "TODO:BOOKING_URL";
 
     return (
-        <section id="agenda" className="py-20 lg:py-28 bg-white">
+        <section id="agenda" className="py-24 lg:py-32 bg-[#050505]">
             <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Header */}
-                <div className="text-center mb-14">
-                    <span className="inline-block bg-[#FFD700]/20 text-[#003366] text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-4">
+                <div className="text-center mb-16">
+                    <span className="inline-block bg-[#D4AF37]/10 text-[#D4AF37] text-[10px] font-bold uppercase tracking-[0.3em] px-5 py-2 rounded-full mb-6 border border-[#D4AF37]/20">
                         Agenda
                     </span>
                     <h2
-                        className="text-3xl sm:text-4xl font-bold text-[#003366] mb-4"
+                        className="text-4xl sm:text-5xl font-black text-white mb-6 uppercase tracking-tight"
                         style={{ fontFamily: "var(--font-heading)" }}
                     >
-                        Agenda una llamada de diagnóstico
+                        AGENDA TU <span className="text-[#D4AF37]">LLAMADA</span>
                     </h2>
-                    <p className="text-gray-500 max-w-xl mx-auto">
-                        Sin costo, sin compromiso. En 30 minutos analizamos tu situación y te decimos cómo podemos ayudarte.
+                    <p className="text-white/50 max-w-xl mx-auto font-medium">
+                        Sin costo, sin compromiso. En 30 minutos analizamos tu situación y proyectamos tu ruta de crecimiento.
                     </p>
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-8">
                     {/* Calendar option */}
-                    <div className="relative bg-[#003366] rounded-3xl p-8 flex flex-col items-center text-center overflow-hidden">
-                        <div className="absolute top-0 right-0 w-40 h-40 bg-[#FFD700]/10 rounded-full translate-x-1/2 -translate-y-1/2 pointer-events-none" />
+                    <div className="relative bg-black rounded-[2rem] p-10 flex flex-col items-center text-center overflow-hidden border border-white/5 group hover:border-[#D4AF37]/30 transition-all duration-500">
+                        <div className="absolute top-0 right-0 w-40 h-40 bg-[#D4AF37]/5 rounded-full blur-[60px] translate-x-1/2 -translate-y-1/2 pointer-events-none" />
                         <div className="relative z-10">
-                            <div className="w-16 h-16 bg-[#FFD700]/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                                <Calendar size={30} className="text-[#FFD700]" />
+                            <div className="w-20 h-20 bg-[#D4AF37]/10 rounded-3xl flex items-center justify-center mx-auto mb-8 group-hover:bg-[#D4AF37] transition-all duration-500 group-hover:-rotate-6">
+                                <Calendar size={32} className="text-[#D4AF37] group-hover:text-black transition-colors" />
                             </div>
-                            <h3 className="text-xl font-bold text-white mb-3" style={{ fontFamily: "var(--font-heading)" }}>
-                                Agendar en calendario
+                            <h3 className="text-2xl font-black text-white mb-4 uppercase tracking-tight" style={{ fontFamily: "var(--font-heading)" }}>
+                                Agendar en Calendario
                             </h3>
-                            <p className="text-white/60 text-sm mb-8 leading-relaxed">
-                                Elige el horario que mejor se adapte a ti y recibe confirmación automática.
+                            <p className="text-white/40 text-sm mb-10 leading-relaxed font-medium">
+                                Elige el horario corporativo que mejor se adapte a tu agenda y recibe confirmación instantánea.
                             </p>
 
                             {hasBookingUrl ? (
@@ -49,10 +49,10 @@ export function Booking() {
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     onClick={() => track.booking("calendly")}
-                                    className="inline-flex items-center gap-2 bg-[#FFD700] hover:bg-[#e6c300] text-[#003366] font-bold px-8 py-3.5 rounded-full transition-all duration-200"
+                                    className="inline-flex items-center gap-3 bg-[#D4AF37] hover:bg-[#B8860B] text-black font-black text-xs uppercase tracking-[0.2em] px-10 py-4 rounded-xl transition-all duration-300 shadow-[0_10px_30px_rgba(212,175,55,0.15)] hover:shadow-[0_15px_40px_rgba(212,175,55,0.3)]"
                                 >
                                     <ExternalLink size={16} />
-                                    Ver disponibilidad
+                                    Ver Disponibilidad
                                 </a>
                             ) : (
                                 <div className="text-center">
@@ -65,10 +65,10 @@ export function Booking() {
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         onClick={() => track.booking("whatsapp_fallback")}
-                                        className="inline-flex items-center gap-2 bg-[#FFD700] hover:bg-[#e6c300] text-[#003366] font-bold px-8 py-3.5 rounded-full transition-all duration-200"
+                                        className="inline-flex items-center gap-3 bg-[#D4AF37] hover:bg-[#B8860B] text-black font-black text-xs uppercase tracking-[0.2em] px-10 py-4 rounded-xl transition-all duration-300 shadow-[0_10px_30px_rgba(212,175,55,0.15)] hover:shadow-[0_15px_40px_rgba(212,175,55,0.3)]"
                                     >
                                         <Calendar size={16} />
-                                        Agendar por WhatsApp
+                                        Agendar Consultoría
                                     </a>
                                 </div>
                             )}
@@ -76,14 +76,14 @@ export function Booking() {
                     </div>
 
                     {/* WhatsApp option */}
-                    <div className="bg-[#F8FAFC] rounded-3xl p-8 flex flex-col items-center text-center border border-gray-100">
-                        <div className="w-16 h-16 bg-[#25D366]/15 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                            <MessageCircle size={30} className="text-[#25D366]" />
+                    <div className="bg-white/[0.03] rounded-[2rem] p-10 flex flex-col items-center text-center border border-white/5 hover:border-[#25D366]/30 transition-all duration-500 group">
+                        <div className="w-20 h-20 bg-[#25D366]/10 rounded-3xl flex items-center justify-center mx-auto mb-8 group-hover:bg-[#25D366] transition-all duration-500 group-hover:rotate-6">
+                            <MessageCircle size={32} className="text-[#25D366] group-hover:text-white transition-colors" />
                         </div>
-                        <h3 className="text-xl font-bold text-[#003366] mb-3" style={{ fontFamily: "var(--font-heading)" }}>
-                            Prefiero WhatsApp
+                        <h3 className="text-2xl font-black text-white mb-4 uppercase tracking-tight" style={{ fontFamily: "var(--font-heading)" }}>
+                            Acceso Directo
                         </h3>
-                        <p className="text-gray-500 text-sm mb-8 leading-relaxed">
+                        <p className="text-white/40 text-sm mb-10 leading-relaxed font-medium">
                             Escríbenos directamente y coordinamos el horario de la llamada de forma inmediata.
                         </p>
                         <a
@@ -91,10 +91,10 @@ export function Booking() {
                             target="_blank"
                             rel="noopener noreferrer"
                             onClick={() => track.booking("whatsapp")}
-                            className="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#1dba58] text-white font-bold px-8 py-3.5 rounded-full transition-all duration-200 shadow-md"
+                            className="inline-flex items-center gap-3 bg-white/5 hover:bg-[#25D366] text-white hover:text-white font-black text-xs uppercase tracking-[0.2em] px-10 py-4 rounded-xl border border-white/10 hover:border-[#25D366] transition-all duration-300"
                         >
                             <MessageCircle size={16} />
-                            Quiero agendar una llamada
+                            Coordinar por WhatsApp
                         </a>
                     </div>
                 </div>

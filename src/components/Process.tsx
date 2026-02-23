@@ -33,26 +33,25 @@ const steps = [
 
 export function Process() {
     return (
-        <section id="proceso" className="py-20 lg:py-28 bg-[#003366] relative overflow-hidden">
+        <section id="proceso" className="py-24 lg:py-32 bg-black relative overflow-hidden">
             {/* Decorative */}
-            <div className="absolute top-0 right-0 w-80 h-80 bg-[#FFD700]/5 rounded-full translate-x-1/2 -translate-y-1/2 pointer-events-none" />
-            <div className="absolute bottom-0 left-0 w-60 h-60 bg-[#FFD700]/5 rounded-full -translate-x-1/2 translate-y-1/2 pointer-events-none" />
+            <div className="absolute top-0 right-0 w-80 h-80 bg-[#D4AF37]/5 rounded-full blur-[100px] translate-x-1/2 -translate-y-1/2 pointer-events-none" />
+            <div className="absolute bottom-0 left-0 w-60 h-60 bg-[#D4AF37]/5 rounded-full blur-[80px] -translate-x-1/2 translate-y-1/2 pointer-events-none" />
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
                 {/* Header */}
-                <div className="text-center mb-16">
-                    <span className="inline-block bg-[#FFD700]/15 text-[#FFD700] text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-4">
+                <div className="text-center mb-20">
+                    <span className="inline-block bg-[#D4AF37]/10 text-[#D4AF37] text-[10px] font-bold uppercase tracking-[0.3em] px-5 py-2 rounded-full mb-6 border border-[#D4AF37]/20">
                         Metodología
                     </span>
                     <h2
-                        className="text-3xl sm:text-4xl font-bold text-white mb-4"
+                        className="text-4xl sm:text-5xl font-black text-white mb-6 uppercase tracking-tight"
                         style={{ fontFamily: "var(--font-heading)" }}
                     >
-                        Cómo trabajamos contigo
+                        CÓMO <span className="text-[#D4AF37]">OPERAMOS</span>
                     </h2>
-                    <p className="text-white/60 max-w-xl mx-auto">
-                        Un proceso claro, coordinado y de{" "}
-                        <span className="text-[#FFD700] font-semibold">un solo contacto</span> desde el diagnóstico hasta el cierre.
+                    <p className="text-white/50 max-w-xl mx-auto font-medium">
+                        Un proceso claro, coordinado y de <span className="text-[#D4AF37] font-bold border-b border-[#D4AF37]/20">único punto de contacto</span> corporativo desde el primer día.
                     </p>
                 </div>
 
@@ -64,22 +63,22 @@ export function Process() {
                             <div key={step.number} className="relative">
                                 {/* Connector line (desktop only) */}
                                 {index < steps.length - 1 && (
-                                    <div className="hidden lg:block absolute top-10 left-[calc(100%_-_16px)] w-full h-px bg-[#FFD700]/20 z-0" />
+                                    <div className="hidden lg:block absolute top-12 left-[calc(100%_-_24px)] w-full h-px bg-[#D4AF37]/10 z-0" />
                                 )}
-                                <div className="relative z-10 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-[#FFD700]/30 rounded-2xl p-7 transition-all duration-300 hover:-translate-y-1">
-                                    <div className="flex items-center justify-between mb-5">
-                                        <div className="w-12 h-12 rounded-xl bg-[#FFD700]/15 flex items-center justify-center">
-                                            <Icon size={22} className="text-[#FFD700]" />
+                                <div className="relative z-10 bg-white/[0.03] hover:bg-white/[0.06] border border-white/5 hover:border-[#D4AF37]/30 rounded-3xl p-8 lg:p-10 transition-all duration-500 hover:-translate-y-2 group">
+                                    <div className="flex items-center justify-between mb-8">
+                                        <div className="w-16 h-16 rounded-2xl bg-[#D4AF37]/10 flex items-center justify-center group-hover:bg-[#D4AF37] transition-all duration-500">
+                                            <Icon size={26} className="text-[#D4AF37] group-hover:text-black transition-colors" />
                                         </div>
-                                        <span className="text-5xl font-bold text-white/10">{step.number}</span>
+                                        <span className="text-6xl font-black text-white/5 group-hover:text-[#D4AF37]/10 transition-colors tracking-tighter">{step.number}</span>
                                     </div>
                                     <h3
-                                        className="text-lg font-bold text-white mb-3"
+                                        className="text-xl font-black text-white mb-4 uppercase tracking-tight"
                                         style={{ fontFamily: "var(--font-heading)" }}
                                     >
                                         {step.title}
                                     </h3>
-                                    <p className="text-white/60 text-sm leading-relaxed">{step.description}</p>
+                                    <p className="text-white/50 text-sm leading-relaxed font-medium group-hover:text-white/70 transition-colors">{step.description}</p>
                                 </div>
                             </div>
                         );

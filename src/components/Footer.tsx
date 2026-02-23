@@ -4,22 +4,26 @@ import { WA_LINKS } from "@/utils/whatsapp";
 export function Footer() {
     const year = new Date().getFullYear();
     return (
-        <footer id="footer" className="bg-[#001a33] text-white">
+        <footer id="footer" className="bg-black text-white border-t border-white/5">
             {/* Top footer */}
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
                 <div className="grid md:grid-cols-3 gap-10">
                     {/* Brand */}
                     <div>
-                        <div className="flex items-center gap-3 mb-5">
-                            <div className="w-10 h-10 bg-[#FFD700] rounded-full flex items-center justify-center font-bold text-[#003366] text-lg">
-                                NL
+                        <div className="flex items-center gap-4 mb-8">
+                            <div className="relative w-12 h-12">
+                                <img
+                                    src="/assets/logo-naudy.webp"
+                                    alt="Naudy López Logo"
+                                    className="w-full h-full object-contain"
+                                />
                             </div>
-                            <div>
-                                <p className="font-bold text-white leading-tight" style={{ fontFamily: "var(--font-heading)" }}>
-                                    Naudy López
+                            <div className="border-l border-white/10 pl-4 py-1">
+                                <p className="font-black text-white text-base leading-tight tracking-tight uppercase" style={{ fontFamily: "var(--font-heading)" }}>
+                                    NAUDY LÓPEZ
                                 </p>
-                                <p className="text-[#FFD700] text-xs font-semibold uppercase tracking-widest">
-                                    Broker 360°
+                                <p className="text-[#D4AF37] text-[10px] font-black uppercase tracking-[0.2em] mt-0.5">
+                                    BROKER 360°
                                 </p>
                             </div>
                         </div>
@@ -30,7 +34,7 @@ export function Footer() {
 
                     {/* Quick Links */}
                     <div>
-                        <h4 className="font-bold text-white/80 uppercase tracking-widest text-xs mb-5">Servicios</h4>
+                        <h4 className="font-black text-[#D4AF37] uppercase tracking-[0.2em] text-[10px] mb-8">Ecosistema</h4>
                         <ul className="space-y-2.5 text-sm text-white/40">
                             {[
                                 "Consultoría (Jurídico / Contable / Inmobiliaria)",
@@ -51,38 +55,38 @@ export function Footer() {
 
                     {/* Contact */}
                     <div>
-                        <h4 className="font-bold text-white/80 uppercase tracking-widest text-xs mb-5">Contacto directo</h4>
+                        <h4 className="font-black text-[#D4AF37] uppercase tracking-[0.2em] text-[10px] mb-8">Acceso Directo</h4>
                         <div className="space-y-4">
                             <a
                                 href={WA_LINKS.general}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="flex items-center gap-3 text-sm text-white/60 hover:text-[#FFD700] transition-colors group"
+                                className="flex items-center gap-4 text-sm text-white/50 hover:text-[#D4AF37] transition-all group"
                             >
-                                <div className="w-8 h-8 rounded-lg bg-white/5 group-hover:bg-[#FFD700]/10 flex items-center justify-center transition-colors">
-                                    <MessageCircle size={15} />
+                                <div className="w-10 h-10 rounded-xl bg-white/5 group-hover:bg-[#D4AF37]/10 flex items-center justify-center transition-colors border border-white/5">
+                                    <MessageCircle size={16} className="group-hover:scale-110 transition-transform" />
                                 </div>
-                                +58 416-7576488 (WhatsApp)
+                                <span className="font-medium">+58 416-7576488</span>
                             </a>
                             <a
                                 href="mailto:naudylopezempresarial@gmail.com"
-                                className="flex items-center gap-3 text-sm text-white/60 hover:text-[#FFD700] transition-colors group"
+                                className="flex items-center gap-4 text-sm text-white/50 hover:text-[#D4AF37] transition-all group"
                             >
-                                <div className="w-8 h-8 rounded-lg bg-white/5 group-hover:bg-[#FFD700]/10 flex items-center justify-center transition-colors">
-                                    <Mail size={15} />
+                                <div className="w-10 h-10 rounded-xl bg-white/5 group-hover:bg-[#D4AF37]/10 flex items-center justify-center transition-colors border border-white/5">
+                                    <Mail size={16} className="group-hover:scale-110 transition-transform" />
                                 </div>
-                                naudylopezempresarial@gmail.com
+                                <span className="font-medium">naudylopezempresarial@gmail.com</span>
                             </a>
                             <a
                                 href="https://naudylopezbroker.lat"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="flex items-center gap-3 text-sm text-white/60 hover:text-[#FFD700] transition-colors group"
+                                className="flex items-center gap-4 text-sm text-white/50 hover:text-[#D4AF37] transition-all group"
                             >
-                                <div className="w-8 h-8 rounded-lg bg-white/5 group-hover:bg-[#FFD700]/10 flex items-center justify-center transition-colors">
-                                    <Globe size={15} />
+                                <div className="w-10 h-10 rounded-xl bg-white/5 group-hover:bg-[#D4AF37]/10 flex items-center justify-center transition-colors border border-white/5">
+                                    <Globe size={16} className="group-hover:scale-110 transition-transform" />
                                 </div>
-                                naudylopezbroker.lat
+                                <span className="font-medium">naudylopezbroker.lat</span>
                             </a>
                         </div>
                     </div>
@@ -90,12 +94,14 @@ export function Footer() {
             </div>
 
             {/* Bottom footer */}
-            <div className="border-t border-white/5">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/25">
-                    <p>© {year} Naudy López Broker 360°. Todos los derechos reservados.</p>
-                    <p className="text-white/20 text-center">
-                        Información general sujeta a evaluación. Los resultados mencionados corresponden a casos reales sin garantía de replicabilidad.
-                    </p>
+            <div className="border-t border-white/5 bg-black/50">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col sm:flex-row items-center justify-between gap-6 text-[10px] text-white/20 font-bold uppercase tracking-[0.1em]">
+                    <p>© {year} Naudy López Broker 360°. — Alianzas Provinciales.</p>
+                    <div className="flex items-center gap-6">
+                        <span className="hover:text-white/40 transition-colors pointer-events-none">Portuguesa, Venezuela</span>
+                        <span className="w-1 h-1 rounded-full bg-white/10" />
+                        <span className="hover:text-white/40 transition-colors pointer-events-none">Sede Corporativa</span>
+                    </div>
                 </div>
             </div>
         </footer>

@@ -12,10 +12,10 @@ export function FloatingWhatsApp() {
             rel="noopener noreferrer"
             onClick={() => track.whatsapp("floating_button")}
             aria-label="Contactar por WhatsApp"
-            className="fixed bottom-6 right-6 z-50 flex items-center gap-2.5 bg-[#25D366] hover:bg-[#1dba58] text-white font-semibold px-5 py-3.5 rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 group hover:-translate-y-1"
+            className="fixed bottom-8 right-8 z-50 flex items-center gap-3 bg-[#D4AF37] hover:bg-black text-black hover:text-[#D4AF37] font-black text-xs uppercase tracking-[0.2em] px-8 py-4 rounded-full shadow-[0_15px_40px_rgba(212,175,55,0.3)] border border-transparent hover:border-[#D4AF37]/50 transition-all duration-500 group hover:-translate-y-2"
         >
-            <MessageCircle size={22} className="shrink-0" />
-            <span className="text-sm hidden sm:inline">Escríbenos</span>
+            <MessageCircle size={22} className="shrink-0 group-hover:scale-110 transition-transform" />
+            <span className="hidden sm:inline">Escribir</span>
         </a>
     );
 }

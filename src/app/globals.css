@@ -1,16 +1,17 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brand-blue: #003366; /* Azul corporativo */
-  --color-brand-gold: #FFD700; /* Dorado/Amarillo CTA */
-  --color-brand-text: #333333; /* Gris texto */
-  --color-brand-green: #556B2F; /* Verde oliva acento */
-  --color-brand-background: #F8FAFC; 
+  --color-brand-black: #000000; /* Fondo principal */
+  --color-brand-gold: #D4AF37; /* Dorado metálico elegante */
+  --color-brand-dark: #111111; /* Gris oscuro para tarjetas */
+  --color-brand-text: #F5F5F5; /* Blanco sucio para texto */
+  --color-brand-muted: #A0A0A0; /* Gris para textos secundarios */
+  --color-brand-background: #000000; 
 }
 
 :root {
-  --background: #ffffff;
-  --foreground: #333333;
+  --background: #000000;
+  --foreground: #F5F5F5;
 }
 
 @media (prefers-color-scheme: dark) {

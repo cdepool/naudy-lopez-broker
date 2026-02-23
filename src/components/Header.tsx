@@ -23,22 +23,26 @@ export function Header() {
 
     return (
         <header
-            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-[#003366] shadow-lg" : "bg-[#003366]"
+            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-black/90 backdrop-blur-md shadow-lg" : "bg-black border-b border-white/5"
                 }`}
         >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-16 lg:h-20">
                     {/* Logo */}
-                    <Link href="/" className="flex items-center gap-3">
-                        <div className="w-10 h-10 bg-[#FFD700] rounded-full flex items-center justify-center font-bold text-[#003366] text-lg leading-none">
-                            NL
+                    <Link href="/" className="flex items-center gap-4">
+                        <div className="relative w-12 h-12 lg:w-14 lg:h-14">
+                            <img
+                                src="/assets/logo-naudy.webp"
+                                alt="Naudy López Logo"
+                                className="w-full h-full object-contain"
+                            />
                         </div>
-                        <div className="flex flex-col">
-                            <span className="text-white font-bold text-base leading-tight" style={{ fontFamily: "var(--font-heading)" }}>
-                                Naudy López
+                        <div className="flex flex-col border-l border-white/20 pl-4">
+                            <span className="text-white font-bold text-base lg:text-lg leading-tight tracking-tight" style={{ fontFamily: "var(--font-heading)" }}>
+                                NAUDY LÓPEZ
                             </span>
-                            <span className="text-[#FFD700] text-xs font-semibold tracking-widest uppercase">
-                                Broker 360°
+                            <span className="text-[#D4AF37] text-[10px] lg:text-xs font-bold tracking-[0.2em] uppercase">
+                                BROKER 360°
                             </span>
                         </div>
                     </Link>
@@ -54,7 +58,7 @@ export function Header() {
                                 key={item.href}
                                 href={item.href}
                                 onClick={() => handleNav(item.label)}
-                                className="text-white/80 hover:text-[#FFD700] text-sm font-medium transition-colors duration-200"
+                                className="text-white/70 hover:text-[#D4AF37] text-sm font-semibold uppercase tracking-wider transition-colors duration-200"
                             >
                                 {item.label}
                             </a>
@@ -68,7 +72,7 @@ export function Header() {
                             target="_blank"
                             rel="noopener noreferrer"
                             onClick={() => track.whatsapp("header")}
-                            className="flex items-center gap-2 bg-[#FFD700] hover:bg-[#e6c300] text-[#003366] font-bold text-sm px-4 py-2.5 rounded-full transition-all duration-200 shadow-md hover:shadow-lg hover:-translate-y-0.5"
+                            className="flex items-center gap-2 bg-[#D4AF37] hover:bg-[#B8860B] text-black font-extrabold text-sm px-6 py-2.5 rounded-full transition-all duration-300 shadow-md hover:shadow-[0_0_15px_rgba(212,175,55,0.4)] hover:-translate-y-0.5"
                         >
                             <MessageCircle size={16} />
                             <span className="hidden sm:inline">WhatsApp</span>
@@ -86,7 +90,7 @@ export function Header() {
 
             {/* Mobile Menu */}
             {isOpen && (
-                <div className="md:hidden bg-[#002855] border-t border-white/10">
+                <div className="md:hidden bg-black border-t border-white/10">
                     <nav className="px-4 py-4 flex flex-col gap-1">
                         {[
                             { label: "Servicios", href: "#servicios" },
@@ -109,10 +113,10 @@ export function Header() {
                             target="_blank"
                             rel="noopener noreferrer"
                             onClick={() => track.whatsapp("mobile-menu")}
-                            className="mt-2 flex items-center justify-center gap-2 bg-[#FFD700] text-[#003366] font-bold py-3 px-4 rounded-full"
+                            className="mt-2 flex items-center justify-center gap-2 bg-[#D4AF37] text-black font-extrabold py-4 px-4 rounded-xl"
                         >
                             <MessageCircle size={18} />
-                            Escribir por WhatsApp
+                            Consultar Ahora
                         </a>
                     </nav>
                 </div>

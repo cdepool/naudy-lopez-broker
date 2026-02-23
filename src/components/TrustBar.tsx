@@ -29,10 +29,10 @@ const stats = [
 
 export function TrustBar() {
     return (
-        <section className="bg-white border-b border-gray-100 py-10">
+        <section className="bg-black border-y border-white/5 py-12 lg:py-16">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <p className="text-center text-sm text-gray-400 uppercase tracking-widest font-semibold mb-8">
-                    Resultados reales con empresas reales
+                <p className="text-center text-xs text-[#D4AF37]/50 uppercase tracking-[0.2em] font-bold mb-12">
+                    — Trayectoria Corporativa Consolidada —
                 </p>
                 <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
                     {stats.map((stat) => {
@@ -40,21 +40,21 @@ export function TrustBar() {
                         return (
                             <div
                                 key={stat.label}
-                                className="flex flex-col items-center text-center p-6 rounded-2xl bg-gray-50 hover:bg-[#003366] group transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+                                className="flex flex-col items-center text-center p-8 rounded-3xl bg-white/5 border border-white/5 hover:border-[#D4AF37]/30 group transition-all duration-500 hover:-translate-y-2 hover:bg-white/[0.08]"
                             >
-                                <div className="w-12 h-12 rounded-full bg-[#003366]/10 group-hover:bg-[#FFD700]/20 flex items-center justify-center mb-3 transition-colors duration-300">
+                                <div className="w-14 h-14 rounded-2xl bg-[#D4AF37]/10 flex items-center justify-center mb-5 group-hover:bg-[#D4AF37] transition-all duration-300">
                                     <Icon
-                                        size={22}
-                                        className="text-[#003366] group-hover:text-[#FFD700] transition-colors duration-300"
+                                        size={26}
+                                        className="text-[#D4AF37] group-hover:text-black transition-colors duration-300"
                                     />
                                 </div>
-                                <span className="text-4xl font-bold text-[#003366] group-hover:text-[#FFD700] transition-colors duration-300">
+                                <span className="text-5xl font-black text-white group-hover:text-[#D4AF37] transition-colors duration-300 tracking-tighter">
                                     {stat.number}
                                 </span>
-                                <span className="text-sm text-gray-600 group-hover:text-white/80 mt-1 transition-colors duration-300">
+                                <span className="text-sm font-bold text-white/90 uppercase tracking-widest mt-2 transition-colors duration-300">
                                     {stat.label}
                                 </span>
-                                <span className="text-xs text-gray-400 group-hover:text-white/50 mt-0.5 transition-colors duration-300">
+                                <span className="text-xs text-[#D4AF37]/60 font-medium uppercase tracking-wider mt-1 transition-colors duration-300">
                                     {stat.sub}
                                 </span>
                             </div>
