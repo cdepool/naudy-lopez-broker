@@ -32,7 +32,7 @@ export function Header() {
                     <Link href="/" className="flex items-center gap-4">
                         <div className="relative w-12 h-12 lg:w-14 lg:h-14">
                             <img
-                                src="/assets/logo-gold.png"
+                                src="/assets/logo-gold.webp"
                                 alt="Naudy López Logo"
                                 className="w-full h-full object-contain rounded-lg"
                             />
