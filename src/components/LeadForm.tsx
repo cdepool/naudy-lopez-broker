@@ -63,97 +63,27 @@ export function LeadForm() {
                     </p>
                 </div>
 
-                <div className="max-w-2xl mx-auto">
-                    {/* Form Card */}
-                    {!submitted ? (
-                        <div className="bg-black rounded-[2.5rem] border border-white/5 p-10 lg:p-14 mb-16 shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
-                            <form onSubmit={handleSubmit} className="space-y-6">
-                                <div className="grid sm:grid-cols-2 gap-5">
-                                    <div>
-                                        <label className="block text-[10px] font-black text-[#D4AF37] uppercase tracking-widest mb-3">
-                                            Nombre y Apellido <span className="text-red-500 opacity-50">*</span>
-                                        </label>
-                                        <input
-                                            name="nombre"
-                                            value={form.nombre}
-                                            onChange={handleChange}
-                                            required
-                                            placeholder="Nombre completo"
-                                            className="w-full bg-white/5 px-6 py-4 rounded-2xl border border-white/5 focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/30 focus:border-[#D4AF37]/50 text-white placeholder-white/20 transition-all font-medium"
-                                        />
-                                    </div>
-                                    <div>
-                                        <label className="block text-[10px] font-black text-[#D4AF37] uppercase tracking-widest mb-3">
-                                            Organización / Empresa <span className="text-red-500 opacity-50">*</span>
-                                        </label>
-                                        <input
-                                            name="empresa"
-                                            value={form.empresa}
-                                            onChange={handleChange}
-                                            required
-                                            placeholder="Nombre de la empresa"
-                                            className="w-full bg-white/5 px-6 py-4 rounded-2xl border border-white/5 focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/30 focus:border-[#D4AF37]/50 text-white placeholder-white/20 transition-all font-medium"
-                                        />
-                                    </div>
-                                </div>
-
-                                <div>
-                                    <label className="block text-[10px] font-black text-[#D4AF37] uppercase tracking-widest mb-3">
-                                        Ecosistema de interés <span className="text-red-500 opacity-50">*</span>
-                                    </label>
-                                    <select
-                                        name="servicio"
-                                        value={form.servicio}
-                                        onChange={handleChange}
-                                        required
-                                        className="w-full bg-white/5 px-6 py-4 rounded-2xl border border-white/5 focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/30 focus:border-[#D4AF37]/50 text-white transition-all font-medium appearance-none"
-                                    >
-                                        <option value="" className="bg-black">Seleccionar servicio...</option>
-                                        {serviceOptions.map((o) => (
-                                            <option key={o.value} value={o.value} className="bg-black">{o.label}</option>
-                                        ))}
-                                    </select>
-                                </div>
-
-                                <div>
-                                    <label className="block text-[10px] font-black text-[#D4AF37] uppercase tracking-widest mb-3">
-                                        Teléfono de Contacto <span className="text-white/20 font-normal">(verificado)</span>
-                                    </label>
-                                    <input
-                                        name="telefono"
-                                        value={form.telefono}
-                                        onChange={handleChange}
-                                        placeholder="+58 4XX XXX XXXX"
-                                        className="w-full bg-white/5 px-6 py-4 rounded-2xl border border-white/5 focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/30 focus:border-[#D4AF37]/50 text-white placeholder-white/20 transition-all font-medium"
-                                    />
-                                </div>
-
-                                <button
-                                    type="submit"
-                                    className="w-full flex items-center justify-center gap-3 bg-[#D4AF37] hover:bg-[#B8860B] text-black font-black text-sm uppercase tracking-[0.2em] py-5 rounded-2xl transition-all duration-300 shadow-[0_10px_30px_rgba(212,175,55,0.15)] hover:shadow-[0_15px_40px_rgba(212,175,55,0.3)] hover:-translate-y-1"
-                                >
-                                    <Send size={18} />
-                                    Iniciar Diagnóstico
-                                </button>
-
-                                <p className="text-xs text-center text-gray-400">
-                                    Al enviar serás redirigido a WhatsApp para confirmar tu solicitud.
-                                </p>
-                            </form>
-                        </div>
-                    ) : (
-                        <div className="bg-black rounded-[2.5rem] border border-[#D4AF37]/30 p-10 lg:p-14 mb-16 text-center shadow-[0_20px_50px_rgba(212,175,55,0.1)]">
-                            <div className="w-20 h-20 rounded-3xl bg-[#D4AF37]/10 flex items-center justify-center mx-auto mb-6">
-                                <span className="text-3xl">✅</span>
-                            </div>
-                            <h3 className="text-2xl font-black text-white mb-4 uppercase tracking-tight" style={{ fontFamily: "var(--font-heading)" }}>
-                                ¡Datos <span className="text-[#D4AF37]">Recibidos</span>!
-                            </h3>
-                            <p className="text-white/50 font-medium">
-                                Te redirigimos a WhatsApp para confirmar tu solicitud y agendar la llamada.
-                            </p>
-                        </div>
-                    )}
+                <div className="max-w-4xl mx-auto">
+                    {/* CRM Form Container */}
+                    <div className="bg-black rounded-[2.5rem] border border-[#D4AF37]/30 p-4 lg:p-8 mb-16 shadow-[0_20px_50px_rgba(212,175,55,0.1)] overflow-hidden min-h-[550px]">
+                        <iframe
+                            src="https://vip.lanextpodcast.live/widget/form/R0pON5VSVrdHyXxI9ssX"
+                            style={{ width: "100%", height: "550px", border: "none", borderRadius: "3px" }}
+                            id="inline-R0pON5VSVrdHyXxI9ssX"
+                            data-layout="{'id':'INLINE'}"
+                            data-trigger-type="alwaysShow"
+                            data-trigger-value=""
+                            data-activation-type="alwaysActivated"
+                            data-activation-value=""
+                            data-deactivation-type="neverDeactivate"
+                            data-deactivation-value=""
+                            data-form-name="Diagnóstico - NaudyLopezBroker"
+                            data-height="495"
+                            data-layout-iframe-id="inline-R0pON5VSVrdHyXxI9ssX"
+                            data-form-id="R0pON5VSVrdHyXxI9ssX"
+                            title="Diagnóstico - NaudyLopezBroker"
+                        ></iframe>
+                    </div>
 
                     {/* Quick WhatsApp chips */}
                     <div>

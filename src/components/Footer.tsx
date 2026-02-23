@@ -1,4 +1,4 @@
-import { MessageCircle, Mail, Globe } from "lucide-react";
+import { MessageCircle, Mail, Globe, Linkedin, Instagram } from "lucide-react";
 import { WA_LINKS } from "@/utils/whatsapp";
 
 export function Footer() {
@@ -78,15 +78,26 @@ export function Footer() {
                                 <span className="font-medium">naudylopezempresarial@gmail.com</span>
                             </a>
                             <a
-                                href="https://naudylopezbroker.lat"
+                                href="https://linkedin.com/in/naudylopez-broker"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="flex items-center gap-4 text-sm text-white/50 hover:text-[#D4AF37] transition-all group"
                             >
                                 <div className="w-10 h-10 rounded-xl bg-white/5 group-hover:bg-[#D4AF37]/10 flex items-center justify-center transition-colors border border-white/5">
-                                    <Globe size={16} className="group-hover:scale-110 transition-transform" />
+                                    <Linkedin size={16} className="group-hover:scale-110 transition-transform" />
                                 </div>
-                                <span className="font-medium">naudylopezbroker.lat</span>
+                                <span className="font-medium">naudylopez-broker</span>
+                            </a>
+                            <a
+                                href="https://instagram.com/naudylopez.broker"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center gap-4 text-sm text-white/50 hover:text-[#D4AF37] transition-all group"
+                            >
+                                <div className="w-10 h-10 rounded-xl bg-white/5 group-hover:bg-[#D4AF37]/10 flex items-center justify-center transition-colors border border-white/5">
+                                    <Instagram size={16} className="group-hover:scale-110 transition-transform" />
+                                </div>
+                                <span className="font-medium">@naudylopez.broker</span>
                             </a>
                         </div>
                     </div>
