@@ -13,7 +13,7 @@ export function Footer() {
                         <div className="flex items-center gap-4 mb-8">
                             <div className="relative w-12 h-12">
                                 <img
-                                    src="/assets/logo-gold.webp"
+                                    src="/assets/logo-official.png"
                                     alt="Naudy López Logo"
                                     className="w-full h-full object-contain rounded-lg"
                                 />
