@@ -6,7 +6,7 @@ import { WA_LINKS } from "@/utils/whatsapp";
 import { track } from "@/utils/tracking";
 
 const serviceOptions = [
-    { value: "consultoria", label: "Consultoría / Permisología / Alianzas" },
+    { value: "consultoria", label: "Consultoría (Jurídico, Contable e Inmobiliario)" },
     { value: "exportar", label: "Exportación / Aduana" },
     { value: "transporte", label: "Transporte Ejecutivo" },
     { value: "expo", label: "Organización de Expos / Ruedas de Negocio" },

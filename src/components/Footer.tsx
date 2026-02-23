@@ -33,7 +33,7 @@ export function Footer() {
                         <h4 className="font-bold text-white/80 uppercase tracking-widest text-xs mb-5">Servicios</h4>
                         <ul className="space-y-2.5 text-sm text-white/40">
                             {[
-                                "Consultoría / Permisología",
+                                "Consultoría (Jurídico / Contable / Inmobiliaria)",
                                 "Exportación / Aduana",
                                 "Transporte Ejecutivo",
                                 "Organización de Expos",

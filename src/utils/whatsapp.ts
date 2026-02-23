@@ -8,6 +8,8 @@ export const WA_LINKS: Record<string, string> = {
     expo: BASE_WA + encodeURIComponent("Hola Naudy, quiero EXPO. Empresa: ___ / Rubro: ___ / Evento: ___."),
     seguro: BASE_WA + encodeURIComponent("Hola Naudy, quiero SEGURO. Tipo: carga/flota/empresa/salud/delivery. Detalles: ___."),
     turismo: BASE_WA + encodeURIComponent("Hola Naudy, quiero TURISMO. Personas: ___ / Destino: ___ / Fecha: ___."),
+    juridico: BASE_WA + encodeURIComponent("Hola Naudy, necesito ASESORÍA JURÍDICA Y CONTABLE para mi empresa ___."),
+    inmobiliaria: BASE_WA + encodeURIComponent("Hola Naudy, estoy interesado en ASESORÍA INMOBILIARIA para ___."),
     agenda: BASE_WA + encodeURIComponent("Hola Naudy, quiero AGENDAR una llamada. Mi empresa es ___ y el tema es ___."),
     general: BASE_WA + encodeURIComponent("Hola Naudy, me interesa conocer más sobre tus servicios."),
 };

@@ -7,14 +7,14 @@ import { track } from "@/utils/tracking";
 const services = [
     {
         icon: Briefcase,
-        title: "Consultoría, Permisología y Alianzas",
+        title: "Consultoría, Asesoría Jurídica, Contable e Inmobiliaria",
         keyword: "CONSULTORÍA",
         waKey: "consultoria",
-        forWho: "Empresas que necesitan permisos, licencias o alianzas estratégicas.",
+        forWho: "Empresas que necesitan permisos, gestión legal, contable o activos inmobiliarios.",
         benefits: [
-            "Gestión completa de permisos y trámites ante entes reguladores",
-            "Acompañamiento en alianzas estratégicas y expansión comercial",
-            "Solución englobada: un solo punto de contacto para todo el proceso",
+            "Consultoría y permisología: trámites, licencias y alianzas estratégicas",
+            "Asesoría jurídica y contable: blindaje legal, fiscal y administrativo",
+            "Agencia inmobiliaria corporativa: galpones, locales y sedes para empresas",
         ],
         color: "#003366",
     },
