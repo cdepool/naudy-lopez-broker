@@ -142,12 +142,16 @@ export function LeadForm() {
                             </form>
                         </div>
                     ) : (
-                        <div className="bg-white rounded-3xl shadow-lg border border-gray-100 p-10 mb-10 text-center">
-                            <div className="w-16 h-16 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-4">
+                        <div className="bg-black rounded-[2.5rem] border border-[#D4AF37]/30 p-10 lg:p-14 mb-16 text-center shadow-[0_20px_50px_rgba(212,175,55,0.1)]">
+                            <div className="w-20 h-20 rounded-3xl bg-[#D4AF37]/10 flex items-center justify-center mx-auto mb-6">
                                 <span className="text-3xl">✅</span>
                             </div>
-                            <h3 className="text-xl font-bold text-[#003366] mb-2">¡Datos recibidos!</h3>
-                            <p className="text-gray-500">Te redirigimos a WhatsApp para confirmar tu solicitud.</p>
+                            <h3 className="text-2xl font-black text-white mb-4 uppercase tracking-tight" style={{ fontFamily: "var(--font-heading)" }}>
+                                ¡Datos <span className="text-[#D4AF37]">Recibidos</span>!
+                            </h3>
+                            <p className="text-white/50 font-medium">
+                                Te redirigimos a WhatsApp para confirmar tu solicitud y agendar la llamada.
+                            </p>
                         </div>
                     )}
 

@@ -16,7 +16,7 @@ const services = [
             "Asesoría jurídica y contable: blindaje legal, fiscal y administrativo",
             "Agencia inmobiliaria corporativa: galpones, locales y sedes para empresas",
         ],
-        color: "#003366",
+        color: "#D4AF37",
     },
     {
         icon: FileText,
@@ -29,7 +29,7 @@ const services = [
             "Reducción de riesgos con permisología al día",
             "Coordinación de logística internacional y cumplimiento normativo",
         ],
-        color: "#003366",
+        color: "#D4AF37",
     },
     {
         icon: Truck,
@@ -42,7 +42,7 @@ const services = [
             "Cobertura en Venezuela con conductores profesionales",
             "Coordinación completa: ruta, horarios y seguimiento",
         ],
-        color: "#003366",
+        color: "#D4AF37",
     },
     {
         icon: Calendar,
@@ -55,7 +55,7 @@ const services = [
             "Base de datos de empresas participantes y gestión de expositores",
             "Experiencia avalada por Expo Feria Páez (250+ empresas, 8 países)",
         ],
-        color: "#003366",
+        color: "#D4AF37",
     },
     {
         icon: Shield,
@@ -68,7 +68,7 @@ const services = [
             "Asesoría personalizada en alianza con Vórtice",
             "Gestión de siniestros y renovaciones incluidas",
         ],
-        color: "#003366",
+        color: "#D4AF37",
     },
     {
         icon: Plane,
@@ -81,7 +81,7 @@ const services = [
             "Coordinación de grupos, logística y alojamiento",
             "Operado a través de Coromotana Travel Tour",
         ],
-        color: "#003366",
+        color: "#D4AF37",
     },
 ];
 
@@ -122,7 +122,7 @@ export function Services() {
 
                                 {/* Title */}
                                 <h3
-                                    className="text-xl font-bold text-[#003366] mb-3"
+                                    className="text-xl font-bold text-white group-hover:text-[#D4AF37] transition-colors mb-3"
                                     style={{ fontFamily: "var(--font-heading)" }}
                                 >
                                     {s.title}
