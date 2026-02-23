@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-blue: #003366; /* Azul corporativo */
+  --color-brand-gold: #FFD700; /* Dorado/Amarillo CTA */
+  --color-brand-text: #333333; /* Gris texto */
+  --color-brand-green: #556B2F; /* Verde oliva acento */
+  --color-brand-background: #F8FAFC; 
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #333333;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #ffffff; /* Keep light mode forced or configure dark mode specifically */
+    --foreground: #333333; 
+  }
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), sans-serif;
+}
+
+/* Base headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading), sans-serif;
+}
+
+/* Utilities */
+@utility text-quote {
+  font-family: var(--font-quote), serif;
+  font-style: italic;
+}
