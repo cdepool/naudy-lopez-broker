@@ -42,7 +42,7 @@ export function Hero() {
                     >
                         Naudy López Broker:{" "}
                         <span className="text-[#FFD700]">Confianza Probada</span> con
-                        Damasco, Taca y Líderes Agro de Portuguesa
+                        Tiendas Damasco, Taca, Kaly y Líderes Agro de Venezuela
                     </h1>
 
                     {/* Subheadline */}
